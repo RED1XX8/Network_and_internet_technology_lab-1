@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Список автомобилей</title>
+</head>
+<body>
+
+<div>
+    <h1>
+        Автомобили
+    </h1>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="car.html">Porsche 911, Германия</a></li>
+        <li><a href="table.html"><b>Список автомобилей</b></a></li>
+    </ul>
+</div>
+<hr>
+
+<div>
+
+    <details>
+        <summary>График</summary>
+        <form>
+            <p>
+                <b>Значение по оси OX</b>
+            </p>
+            <div>
+                <input type="radio" id="x_type" name="axisX" value="type"><label for="x_type">Тип двигателя</label>
+            </div>
+            <div>
+                <input type="radio" id="x_country" name="axisX" value="country"><label for="x_country">Страна</label>
+            </div>
+            <div>
+                <input type="radio" id="x_year" name="axisX" value="year"><label for="x_year">Год</label>
+            </div>
+            <p>
+                <b>Значение по оси OY</b>
+            </p>
+            <div>
+                <input type="checkbox" id="y_max" name="axisY" value="max"><label for="y_max">Максимальная мощность</label>
+            </div>
+            <div>
+                <input type="checkbox" id="y_min" name="axisY" value="min"><label for="y_min">Минимальная мощность</label>
+            </div>
+            <div>
+                <input type="checkbox" id="y_count" name="axisY" value="count"><label for="y_count">Средняя мощность</label>
+            </div>
+            <p>
+                <button type="button">Построить</button>
+            </p>
+        </form>
+
+    </details>
+
+    <details>
+        <summary>Фильтр</summary>
+        <form>
+            <p>
+                <label for="f_name">Название:</label> <input type="text" id="f_name" name="name">
+            </p>
+            <p>
+                <label for="f_type">Тип:</label> <input type="text" id="f_type" name="type">
+            </p>
+            <p>
+                <label for="f_country">Страна:</label> <input type="text" id="f_country" name="country">
+            </p>
+            <p>
+                <label for="f_engine">Тип двигателя:</label> <input type="text" id="f_engine" name="engine">
+            </p>
+            <p>
+                <label for="f_year_from">Год: от</label> <input type="number" id="f_year_from" name="yearFrom"> <label for="f_year_to">до</label> <input type="number" id="f_year_to" name="yearTo">
+            </p>
+            <p>
+                <label for="f_power_from">Мощность: от</label> <input type="number" id="f_power_from" name="powerFrom"> <label for="f_power_to">до</label> <input type="number" id="f_power_to" name="powerTo">
+            </p>
+            <p>
+                <button type="button">Найти</button>
+            </p>
+        </form>
+    </details>
+
+    <details>
+        <summary>Сортировка</summary>
+        <form>
+            <p><label for="s1">Первый уровень:</label>
+                <select id="s1" name="sort1">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="engine">Тип двигателя</option>
+                    <option value="year">Год</option>
+                    <option value="power">Мощность</option>
+                </select>
+                <input type="checkbox" id="s1d" name="desc1"><label for="s1d">по убыванию?</label></p>
+            <p><label for="s2">Второй уровень:</label>
+                <select id="s2" name="sort2">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="engine">Тип двигателя</option>
+                    <option value="year">Год</option>
+                    <option value="power">Мощность</option>
+                </select>
+                <input type="checkbox" id="s2d" name="desc2"><label for="s2d">по убыванию?</label></p>
+            <p><label for="s3">Третий уровень:</label>
+                <select id="s3" name="sort3">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="engine">Тип двигателя</option>
+                    <option value="year">Год</option>
+                    <option value="power">Мощность</option>
+                </select>
+                <input type="checkbox" id="s3d" name="desc3"><label for="s3d">по убыванию?</label></p>
+            <p>
+                <button type="button">Сортировать</button>
+            </p>
+        </form>
+    </details>
+
+    <table border="1" cellpadding="5">
+        <thead>
+        <tr><th>Название</th><th>Тип</th><th>Страна</th><th>Тип двигателя</th><th>Год</th><th>Мощность, л.с.</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>Bugatti Chiron</td><td>Гиперкар</td><td>Франция</td><td>ДВС</td><td>2016</td><td>1500</td></tr>
+        <tr><td>Bugatti Veyron</td><td>Гиперкар</td><td>Франция</td><td>ДВС</td><td>2005</td><td>1001</td></tr>
+        <tr><td>Koenigsegg Jesko</td><td>Гиперкар</td><td>Швеция</td><td>ДВС</td><td>2019</td><td>1600</td></tr>
+        <tr><td>Pagani Huayra</td><td>Гиперкар</td><td>Италия</td><td>ДВС</td><td>2011</td><td>700</td></tr>
+        <tr><td>Ferrari 488 GTB</td><td>Купе</td><td>Италия</td><td>ДВС</td><td>2015</td><td>670</td></tr>
+        <tr><td>Ferrari F40</td><td>Купе</td><td>Италия</td><td>ДВС</td><td>1987</td><td>478</td></tr>
+        <tr><td>Lamborghini Aventador</td><td>Купе</td><td>Италия</td><td>ДВС</td><td>2011</td><td>700</td></tr>
+        <tr><td>Lamborghini Huracán</td><td>Купе</td><td>Италия</td><td>ДВС</td><td>2014</td><td>610</td></tr>
+        <tr><td>Maserati MC20</td><td>Купе</td><td>Италия</td><td>ДВС</td><td>2020</td><td>630</td></tr>
+        <tr><td>Alfa Romeo Giulia Quadrifoglio</td><td>Седан</td><td>Италия</td><td>ДВС</td><td>2015</td><td>510</td></tr>
+        <tr><td>Porsche 911 Carrera (992)</td><td>Купе</td><td>Германия</td><td>ДВС</td><td>2018</td><td>385</td></tr>
+        <tr><td>Porsche Taycan Turbo S</td><td>Лифтбек</td><td>Германия</td><td>Электрический</td><td>2019</td><td>761</td></tr>
+        <tr><td>Porsche Cayenne Turbo</td><td>Внедорожник</td><td>Германия</td><td>ДВС</td><td>2002</td><td>450</td></tr>
+        <tr><td>BMW M3 Competition (G80)</td><td>Седан</td><td>Германия</td><td>ДВС</td><td>2020</td><td>510</td></tr>
+        <tr><td>BMW X5 (E53)</td><td>Внедорожник</td><td>Германия</td><td>ДВС</td><td>1999</td><td>286</td></tr>
+        <tr><td>BMW i8</td><td>Купе</td><td>Германия</td><td>Гибрид</td><td>2014</td><td>362</td></tr>
+        <tr><td>Mercedes-Benz S 580 (W223)</td><td>Седан</td><td>Германия</td><td>Гибрид</td><td>2020</td><td>503</td></tr>
+        <tr><td>Mercedes-AMG GT</td><td>Купе</td><td>Германия</td><td>ДВС</td><td>2014</td><td>462</td></tr>
+        <tr><td>Mercedes-AMG G 63</td><td>Внедорожник</td><td>Германия</td><td>ДВС</td><td>2018</td><td>585</td></tr>
+        <tr><td>Audi RS6 Avant (C8)</td><td>Универсал</td><td>Германия</td><td>ДВС</td><td>2019</td><td>600</td></tr>
+        <tr><td>Audi Quattro</td><td>Купе</td><td>Германия</td><td>ДВС</td><td>1980</td><td>200</td></tr>
+        <tr><td>Audi e-tron GT RS</td><td>Седан</td><td>Германия</td><td>Электрический</td><td>2021</td><td>646</td></tr>
+        <tr><td>Volkswagen Golf R32</td><td>Хэтчбек</td><td>Германия</td><td>ДВС</td><td>2002</td><td>241</td></tr>
+        <tr><td>Volkswagen Beetle</td><td>Седан</td><td>Германия</td><td>ДВС</td><td>1938</td><td>25</td></tr>
+        <tr><td>Toyota GR Supra (A90)</td><td>Купе</td><td>Япония</td><td>ДВС</td><td>2019</td><td>340</td></tr>
+        <tr><td>Toyota Land Cruiser 300</td><td>Внедорожник</td><td>Япония</td><td>ДВС</td><td>2021</td><td>415</td></tr>
+        <tr><td>Toyota Camry (XV70)</td><td>Седан</td><td>Япония</td><td>ДВС</td><td>2017</td><td>203</td></tr>
+        <tr><td>Toyota GR Yaris</td><td>Хэтчбек</td><td>Япония</td><td>ДВС</td><td>2020</td><td>261</td></tr>
+        <tr><td>Nissan GT-R (R35)</td><td>Купе</td><td>Япония</td><td>ДВС</td><td>2007</td><td>480</td></tr>
+        <tr><td>Nissan Skyline GT-R (R34)</td><td>Купе</td><td>Япония</td><td>ДВС</td><td>1999</td><td>280</td></tr>
+        <tr><td>Honda NSX (NA1)</td><td>Купе</td><td>Япония</td><td>ДВС</td><td>1990</td><td>270</td></tr>
+        <tr><td>Honda Civic Type R (FK8)</td><td>Хэтчбек</td><td>Япония</td><td>ДВС</td><td>2017</td><td>320</td></tr>
+        <tr><td>Mazda MX-5 (ND)</td><td>Родстер</td><td>Япония</td><td>ДВС</td><td>2015</td><td>131</td></tr>
+        <tr><td>Subaru WRX STI (VA)</td><td>Седан</td><td>Япония</td><td>ДВС</td><td>2014</td><td>300</td></tr>
+        <tr><td>Mitsubishi Lancer Evolution X</td><td>Седан</td><td>Япония</td><td>ДВС</td><td>2007</td><td>295</td></tr>
+        <tr><td>Lexus LFA</td><td>Купе</td><td>Япония</td><td>ДВС</td><td>2010</td><td>560</td></tr>
+        <tr><td>Tesla Model S Plaid</td><td>Лифтбек</td><td>США</td><td>Электрический</td><td>2021</td><td>1020</td></tr>
+        <tr><td>Tesla Cybertruck</td><td>Пикап</td><td>США</td><td>Электрический</td><td>2023</td><td>845</td></tr>
+        <tr><td>Ford Mustang Shelby GT500</td><td>Купе</td><td>США</td><td>ДВС</td><td>2020</td><td>760</td></tr>
+        <tr><td>Ford F-150 Raptor R</td><td>Пикап</td><td>США</td><td>ДВС</td><td>2022</td><td>720</td></tr>
+        <tr><td>Ford Model T</td><td>Седан</td><td>США</td><td>ДВС</td><td>1908</td><td>20</td></tr>
+        <tr><td>Chevrolet Corvette Z06 (C8)</td><td>Купе</td><td>США</td><td>ДВС</td><td>2022</td><td>670</td></tr>
+        <tr><td>Chevrolet Camaro ZL1</td><td>Купе</td><td>США</td><td>ДВС</td><td>2017</td><td>650</td></tr>
+        <tr><td>Dodge Challenger SRT Hellcat</td><td>Купе</td><td>США</td><td>ДВС</td><td>2015</td><td>707</td></tr>
+        <tr><td>Jeep Wrangler Rubicon (JL)</td><td>Внедорожник</td><td>США</td><td>ДВС</td><td>2018</td><td>285</td></tr>
+        <tr><td>Cadillac Escalade-V</td><td>Внедорожник</td><td>США</td><td>ДВС</td><td>2023</td><td>682</td></tr>
+        <tr><td>Rolls-Royce Phantom VIII</td><td>Седан</td><td>Великобритания</td><td>ДВС</td><td>2017</td><td>571</td></tr>
+        <tr><td>Bentley Continental GT Speed</td><td>Купе</td><td>Великобритания</td><td>ДВС</td><td>2021</td><td>659</td></tr>
+        <tr><td>Aston Martin DB11</td><td>Купе</td><td>Великобритания</td><td>ДВС</td><td>2016</td><td>608</td></tr>
+        <tr><td>McLaren 720S</td><td>Купе</td><td>Великобритания</td><td>ДВС</td><td>2017</td><td>720</td></tr>
+        <tr><td>Land Rover Defender P400</td><td>Внедорожник</td><td>Великобритания</td><td>Гибрид</td><td>2019</td><td>400</td></tr>
+        <tr><td>MINI Cooper S (R53)</td><td>Хэтчбек</td><td>Великобритания</td><td>ДВС</td><td>2001</td><td>163</td></tr>
+        <tr><td>Jaguar E-Type</td><td>Купе</td><td>Великобритания</td><td>ДВС</td><td>1961</td><td>265</td></tr>
+        <tr><td>Volvo XC90 T8 Recharge</td><td>Внедорожник</td><td>Швеция</td><td>Гибрид</td><td>2015</td><td>407</td></tr>
+        <tr><td>Skoda Octavia RS</td><td>Лифтбек</td><td>Чехия</td><td>ДВС</td><td>2001</td><td>180</td></tr>
+        <tr><td>Lada Niva (ВАЗ-2121)</td><td>Внедорожник</td><td>Россия</td><td>ДВС</td><td>1977</td><td>78</td></tr>
+        <tr><td>Lada Vesta</td><td>Седан</td><td>Россия</td><td>ДВС</td><td>2015</td><td>106</td></tr>
+        <tr><td>ВАЗ-2101 «Жигули»</td><td>Седан</td><td>СССР</td><td>ДВС</td><td>1970</td><td>64</td></tr>
+        <tr><td>ГАЗ-21 «Волга»</td><td>Седан</td><td>СССР</td><td>ДВС</td><td>1956</td><td>70</td></tr>
+        <tr><td>УАЗ Patriot</td><td>Внедорожник</td><td>Россия</td><td>ДВС</td><td>2005</td><td>128</td></tr>
+        <tr><td>Aurus Senat</td><td>Седан</td><td>Россия</td><td>ДВС</td><td>2018</td><td>598</td></tr>
+        <tr><td>Hyundai Ioniq 5 N</td><td>Кроссовер</td><td>Южная Корея</td><td>Электрический</td><td>2023</td><td>650</td></tr>
+        <tr><td>Kia Stinger GT</td><td>Лифтбек</td><td>Южная Корея</td><td>ДВС</td><td>2017</td><td>365</td></tr>
+        <tr><td>BYD Seal</td><td>Седан</td><td>Китай</td><td>Электрический</td><td>2022</td><td>530</td></tr>
+        <tr><td>NIO ET7</td><td>Седан</td><td>Китай</td><td>Электрический</td><td>2021</td><td>653</td></tr>
+        </tbody>
+    </table>
+
+</div>
+<hr>
+
+
+
+</body>
+</html>
